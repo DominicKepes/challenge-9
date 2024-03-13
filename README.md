@@ -3,7 +3,7 @@
 
 ## Description
 
-simple command line program to create a readme for your projects.
+cmd prompt to create readmes
 
 ## Table of Contents 
 
@@ -45,5 +45,5 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at dominickepes1@gmail.com. You can find more of my work at [dominickepes](https://github.com/dominickepes/).
+If you have any questions about the repo, open an issue or contact me directly at dominickepes1@gmial.com. You can find more of my work at [dominickepes](https://github.com/dominickepes/).
 

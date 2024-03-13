@@ -1,24 +1,18 @@
-// Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function generateLicenseBadge(license) {
   if (license !== 'None') {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
   return '';
 }
 
-// Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
+function generateLicenseLink(license) {
   if (license !== 'None') {
     return `\n* [License](#license)\n`;
   }
   return '';
 }
 
-// Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
+function generateLicenseSection(license) {
   if (license !== 'None') {
     return `## License
 
@@ -27,21 +21,20 @@ This project is licensed under the ${license} license.`;
   return '';
 }
 
-// Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-${renderLicenseBadge(data.license)}
+  return `# ${data.projectTitle}
+${generateLicenseBadge(data.projectLicense)}
 
 ## Description
 
-${data.description}
+${data.projectDescription}
 
 ## Table of Contents 
 
 * [Installation](#installation)
 
 * [Usage](#usage)
-${renderLicenseLink(data.license)}
+${generateLicenseLink(data.projectLicense)}
 * [Contributing](#contributing)
 
 * [Tests](#tests)
@@ -53,33 +46,33 @@ ${renderLicenseLink(data.license)}
 To install necessary dependencies, run the following command:
 
 \`\`\`
-${data.installation}
+${data.dependenciesInstallation}
 \`\`\`
 
 ## Usage
 
-${data.usage}
+${data.repositoryUsage}
 
-${renderLicenseSection(data.license)}
+${generateLicenseSection(data.projectLicense)}
   
 ## Contributing
 
-${data.contributing}
+${data.contributionInfo}
 
 ## Tests
 
 To run tests, run the following command:
 
 \`\`\`
-${data.test}
+${data.testCommand}
 \`\`\`
 
 ## Questions
 
 If you have any questions about the repo, open an issue or contact me directly at ${
-    data.email
-  }. You can find more of my work at [${data.github}](https://github.com/${
-    data.github
+    data.emailAddress
+  }. You can find more of my work at [${data.githubUsername}](https://github.com/${
+    data.githubUsername
   }/).
 
 `;
